@@ -1,5 +1,5 @@
 name = "killergg/axis"
-version = "0.2.3-rc.2"
+version = "0.2.3"
 description = "An agnostic, simple and versatile input library for ECS"
 authors = ["NeonD00m", "As8D"]
 repository = "https://github.com/neond00m/Axis"

@@ -246,11 +246,7 @@ local function map<T>(input: types.Input<T>, keyMap: types.Map<T>)
 		end
 	end
 
-	local inputBeganOrEnded = function(inputObject, sunk)
-		if sunk then
-			return
-		end
-
+	local function inputHappened(inputObject)
 		local controller = getGamepad(inputObject.UserInputType)
 		input.active[controller] = input.active[controller] or {}
 		local active = input.active[controller]
@@ -263,8 +259,14 @@ local function map<T>(input: types.Input<T>, keyMap: types.Map<T>)
 				inputObject.UserInputState == Enum.UserInputState.Change then input.inputMap[enum] else nil) :: (nil & T)
 		end
 	end
-	table.insert(input.connections, UserInputService.InputBegan:Connect(inputBeganOrEnded))
-	table.insert(input.connections, UserInputService.InputEnded:Connect(inputBeganOrEnded))
+
+	local inputBegan = function(inputObject, sunk)
+		if not sunk then
+			inputHappened(inputObject)
+		end
+	end
+	table.insert(input.connections, UserInputService.InputBegan:Connect(inputBegan))
+	table.insert(input.connections, UserInputService.InputEnded:Connect(inputHappened))
 end
 
 --[=[
