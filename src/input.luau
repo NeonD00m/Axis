@@ -193,7 +193,10 @@ local function map<T>(input: types.Input<T>, keyMap: types.Map<T>)
 			end))
 		elseif inputType == Enum.UserInputType.MouseWheel then
 			setVector(autoType, inputType)
-			table.insert(input.connections, UserInputService.InputChanged:Connect(function(object)
+			table.insert(input.connections, UserInputService.InputChanged:Connect(function(object, processed)
+				if processed then
+					return
+				end
 				if object.UserInputType ~= Enum.UserInputType.MouseWheel then
 					return
 				end
