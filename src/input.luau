@@ -21,7 +21,7 @@ end
 --[=[
 	@within Input
 	@method getGamepad
-	@param inputType
+	@param inputType Enum.UserInputType
 	@return number
 	Returns the gamepad index of the given inputType, 1 if not a gamepad
 ]=]
