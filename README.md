@@ -14,8 +14,8 @@ Axis is an agnostic, simple and flexible input library for ECS.
 
 ### Getting Started
 
-- **Documentation**: [https://neond00m.github.io/Axis/](https://neond00m.github.io/Axis/)
-- **Demo Game**: [https://www.roblox.com/games/119823868761655/Axis-Example-Place](https://www.roblox.com/games/119823868761655/Axis-Example-Place)
+- Documentation: [https://neond00m.github.io/Axis/](https://neond00m.github.io/Axis/)
+- Demo Game: [https://www.roblox.com/games/119823868761655/Axis-Example-Place](https://www.roblox.com/games/119823868761655/Axis-Example-Place)
 
 ### Installation
 
