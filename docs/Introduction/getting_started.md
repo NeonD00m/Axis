@@ -10,7 +10,7 @@ sidebar_position: 1
 Currently only available on [pesde](https://pesde.dev/packages/killergg/axis)
 
 ## Usage
-While this library is agnostic and doesn't require an ECS of any sort, it is definitely ECS-oriented since its meant to be run in systems. Input axes run on a frame by frame basis, meaning they need to be updated every frame.
+While this library is agnostic and doesn't require an ECS of any sort, it is definitely ECS-oriented since it's meant to be run in systems. Input axes run on a frame by frame basis, meaning they need to be updated every frame.
 ```lua
 RunService.RenderStepped:Connect(function()
     attack:update() -- update the input axes
@@ -63,7 +63,7 @@ local movementIn2D = Axis.input {
     -- [Enum.KeyCode.D] = 1, -- this is explicit, but has same behavior
 }
 ```
-If both keys were being pressed at the same time, the value of the input as a whole would be 0, since 1 + (-1) = 0. This is how input is calculated internally- it's just a sum of all the axes. You could weight axes very differently, if you wanted:
+If both keys were being pressed at the same time, the value of the input as a whole would be 0, since 1 + (-1) = 0. This is how input is calculated internally. It's just a sum of all the axes. You could weight axes very differently, if you wanted:
 ```lua
 local acceleratePedal = Axis.input {
     [Enum.KeyCode.Q] = 3,
