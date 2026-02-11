@@ -1,7 +1,7 @@
 local UserInputService = game:GetService("UserInputService")
-local types = require(script.types)
-local constructor = require(script.input)
-local getInputDevice = require(script.getInputDevice)
+local types = require("@self/types")
+local constructor = require("@self/input")
+local getInputDevice = require("@self/getInputDevice")
 
 --[=[
 	@class Axis

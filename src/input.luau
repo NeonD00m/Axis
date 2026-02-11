@@ -6,8 +6,8 @@
 ]=]
 local UserInputService = game:GetService("UserInputService")
 
-local types = require(script.Parent.types)
-local match = require(script.Parent.match)
+local types = require("./types")
+local match = require("./match")
 
 local NEXT_HOLD_INDEX = 1
 

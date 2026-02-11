@@ -10,7 +10,7 @@
 	}
 ```]]
 return function<T, V...>(value: T, ...: V...)
-	local args = {...}
+	local args = { ... }
 	return function<R>(cases: {R | (T, V...) -> R}): R?
 		assert(type(cases) == 'table', "cases needs to be table")
 		for i = 1, #cases, 2 do
