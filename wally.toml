@@ -3,7 +3,7 @@ name = "neond00m/axis"
 version = "0.2.3"
 description = "An agnostic, simple and versatile input library for ECS. "
 keywords = ["input", "ecs",]
-authors = ["NeonD00m", "As8D"]
+authors = ["NeonD00m", "as8d"]
 license = "MIT"
 
 realm = "shared"
