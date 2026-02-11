@@ -7,7 +7,7 @@
 Axis is an agnostic, simple and flexible input library for ECS.
 
 - Complete cross platform support
-- Unified scalar and vector axes
+- Scalar and vector axes for input
 - Manual input changes with `hold` and `move`
 - Customizable controller deadzones
 - Works with or without ECS
