@@ -33,9 +33,7 @@ local inputMap = {
 }
 return inputMap
 ```
-Of course you can do something in between but at killer.gg we have found that containing all the input axes in a single module is the best option, since it allows us to easily access all of them in other systems (see mobileInput.luau and camera.luau in the example game).
+Of course you can do something in between but we have found that containing all the input axes in a single module is the best option, since it allows us to easily access all of them in other systems (see mobileInput.luau and camera.luau in the example game).
 
 <br/>
 <br/>
-
-More stuff soon probably

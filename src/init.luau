@@ -1,4 +1,4 @@
-local UserInputService = game:GetService("UserInputService")
+local UserInputService = _G.UserInputService or game:GetService("UserInputService")
 local types = require("@self/types")
 local constructor = require("@self/input")
 local getInputDevice = require("@self/getInputDevice")
@@ -51,7 +51,7 @@ end
 	end
 	```
 ]=]
-function Axis.device(input: Enum.UserInputType?): types.DeviceType
+function Axis.device(input: any?): types.DeviceType
    return getInputDevice(input or UserInputService:GetLastInputType())
 end
 

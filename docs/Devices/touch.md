@@ -42,7 +42,7 @@ aimButton.InputBegan:Connect(function(input)
 end)
 
 UserInputService.InputEnded:Connect(function(input)
-    if not releaseJump or input ~= touch or input.UserInputState ~= Enum.UserInputState.End then
+    if not release or input ~= touch or input.UserInputState ~= Enum.UserInputState.End then
         return
     end
     if input.UserInputType ~= Enum.UserInputType.MouseButton1 and

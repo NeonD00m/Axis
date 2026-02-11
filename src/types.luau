@@ -9,8 +9,7 @@ export type DeviceType = "Desktop" | "Touch" | "Controller"
     @within Axis
     @type Map<T> { [Enum | string]: T } & { Enum.KeyCode | Enum.UserInputType }
 ]=]
-export type Map<T> = { [any]: any }
---{ [Enum.UserInputType | Enum.KeyCode | string]: T } & { Enum.KeyCode | Enum.UserInputType }
+export type Map<T> = { [any]: T } | { [number]: any }
 
 export type Input<T> = {
     read: (Input<T>, controller: number?) -> (T, T),
@@ -18,26 +17,26 @@ export type Input<T> = {
     pressed: (Input<T>, controller: number?) -> boolean,
     released: (Input<T>, controller: number?) -> boolean,
     changed: (Input<T>, controller: number?) -> boolean,
-    hold: (Input<T>, value: T, controller: number?) -> (),
+    hold: (Input<T>, value: T?, controller: number?) -> () -> (),
     move: (Input<T>, value: T, controller: number?) -> (),
     map: (Input<T>, keyMap: Map<T>) -> nil,
     update: (Input<T>) -> nil,
 
     deadzone: number?,
-    vector: boolean,
+    vector: boolean?,
     current: { T },
     previous: { T },
     active: { { [any]: T } },
     resets: { [any]: { any } },
-    connections: { RBXScriptConnection },
+    connections: { any },
     keyMap: Map<T>,
-    inputMap: { [Enum.KeyCode | Enum.UserInputType]: T },
+    inputMap: { [any]: T },
 }
 
 export type InputConstructor = <T>(Map<T> | (Map<T> & { deadzone: number? })) -> Input<T>
 
 export type Axis = {
-    device: (Enum.UserInputType?) -> DeviceType,
+    device: (any?) -> DeviceType,
     update: (inputs: { [any]: Input<any> } ) -> nil,
     clear: (any) -> nil,
     input: InputConstructor,
