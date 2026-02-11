@@ -1,0 +1,14 @@
+[package]
+name = "neond00m/axis"
+version = "0.2.3"
+description = "An agnostic, simple and versatile input library for ECS. "
+keywords = ["input", "ecs",]
+authors = ["NeonD00m", "As8D"]
+license = "MIT"
+
+realm = "shared"
+
+registry = "https://github.com/UpliftGames/wally-index"
+repository = "https://github.com/Neond00m/Axis"
+
+include = ["src/"]
