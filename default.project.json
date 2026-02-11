@@ -1,10 +1,6 @@
 {
-  "tree": {
-    "src": {
-      "$path": "src"
-    },
-    "roblox_packages": {
-      "$path": "roblox_packages"
+    "name": "axis",
+    "tree": {
+        "$path": "src"
     }
-  }
 }
