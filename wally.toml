@@ -12,4 +12,4 @@ registry = "https://github.com/UpliftGames/wally-index"
 repository = "https://github.com/Neond00m/Axis"
 
 # for some reason include = ["src"} doesn't work
-exclude = ["zune", "tests", "pesde.lock", "pesde.toml", "lune_packages", "luau_packages", "moonwave.toml", "pages", "examples", "images", "luau-lsp", "exampleGame", "*project.json", "docs", "globalTypes.d.luau"]
+exclude = ["zune", "tests", "pesde.lock", "pesde.toml", "lune_packages", "luau_packages", "moonwave.toml", "pages", "examples", "images", "luau-lsp", "exampleGame", "example.project.json", "docs", "globalTypes.d.luau"]
