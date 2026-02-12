@@ -11,4 +11,5 @@ realm = "shared"
 registry = "https://github.com/UpliftGames/wally-index"
 repository = "https://github.com/Neond00m/Axis"
 
-include = ["src/"]
+# for some reason include = ["src"} doesn't work
+exclude = ["zune", "tests", "pesde.lock", "pesde.toml", "lune_packages", "luau_packages", "moonwave.toml", "pages", "examples", "images", "luau-lsp", "exampleGame", "*project.json", "docs", "globalTypes.d.luau"]
