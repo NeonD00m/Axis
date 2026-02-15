@@ -5,7 +5,7 @@ sidebar_position: 3
 ---
 
 # Example Game
-Play the example game [here](http://rblx.games/119823868761655)
+Play the example game [here](http://rblx.games/119823868761655).
 This article features abridged samples of the actual code in the example game, but you can view the full code [here](https://github.com/NeonD00m/Axis/tree/main/exampleGame/client).
 
 ### Behind The Scenes
@@ -14,7 +14,7 @@ The concept for this game was to implement three simple mechanics with Axis:
 2. A hold-to-jump mechanic for all platforms
 3. Custom camera (to show how to use mouse input, `hold()`, and throw console support in there)
 
-THe above order is also the order in which the features will be explained in to roughly go from least to most complex.
+The above order is also the order in which the features will be explained in to roughly go from least to most complex.
 
 ### Toggleable Crouch
 Alright so here is the actual keymap for the crouching feature. We include all the possible keyboard keys that people might use, as well as the right thumbstick for console. Mobile will be implemented separately.
