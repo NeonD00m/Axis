@@ -38,7 +38,6 @@ export type InputConstructor = <T>(Map<T> | (Map<T> & { deadzone: number? })) ->
 export type Axis = {
     device: (any?) -> DeviceType,
     update: (inputs: { [any]: Input<any> } ) -> nil,
-    clear: (any) -> nil,
     input: InputConstructor,
 }
 
